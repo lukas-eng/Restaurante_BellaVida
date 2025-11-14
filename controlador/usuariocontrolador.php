@@ -20,7 +20,7 @@ public function validarusu() {
             
             // Redirigimos según el rol
             if ($usuario['rol'] === 'admin') {
-                header("Location: ../views/index.html"); // Redirige al admin a la página principal
+                header("Location: ../views/html/perfil.php"); // Redirige al admin al perfil
             } else {
                 header("Location: ../views/index.html"); // Redirige a usuarios normales al perfil
             }
@@ -39,12 +39,29 @@ public function validarusu() {
 
 public function editarUsuario() {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['editar_usuario'])) {
+        session_start();
+        
+        // Validar que el usuario esté logueado
+        if (!isset($_SESSION['usuario'])) {
+            header("Location: /restaurante/views/html/iniciarsesion.php");
+            exit;
+        }
+        
         $id = $_POST['id'];
         $nombre = $_POST['nombre'];
         $correo = $_POST['correo'];
         $documento = $_POST['documento'];
         $telefono = $_POST['telefono'];
         $rol = $_POST['rol'];
+        
+        // Validar permisos: solo admin o el usuario logueado pueden editar
+        $es_admin = $_SESSION['usuario']['rol'] === 'admin';
+        $es_propio_usuario = $_SESSION['usuario']['id_usuario'] == $id;
+        
+        if (!$es_admin && !$es_propio_usuario) {
+            header("Location: /restaurante/views/html/perfil.php?error=sin_permiso");
+            exit;
+        }
 
         $this->modelusuario->actualizarUsuario($id, $nombre, $correo, $documento, $telefono, $rol);
 
@@ -104,6 +121,36 @@ public function registrarUsuario() {
     }
 }
 
+public function eliminarUsuario() {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eliminar_usuario'])) {
+        session_start();
+        
+        // Validar que el usuario esté logueado
+        if (!isset($_SESSION['usuario'])) {
+            header("Location: /restaurante/views/html/iniciarsesion.php");
+            exit;
+        }
+        
+        // Solo admins pueden eliminar usuarios
+        if ($_SESSION['usuario']['rol'] !== 'admin') {
+            header("Location: /restaurante/views/html/perfil.php?error=sin_permiso");
+            exit;
+        }
+        
+        $id = $_POST['id'];
+        
+        // No permitir que un admin se elimine a sí mismo
+        if ($_SESSION['usuario']['id_usuario'] == $id) {
+            header("Location: /restaurante/views/html/perfil.php?error=no_puedes_eliminarte");
+            exit;
+        }
+        
+        $this->modelusuario->eliminarUsuario($id);
+        
+        header("Location: /restaurante/views/html/perfil.php?eliminado=1");
+        exit;
+    }
+}
 
 }
 $objeto = new UsuarioController();
@@ -111,6 +158,8 @@ $objeto = new UsuarioController();
 // Determinar qué acción realizar basado en los datos POST
 if (isset($_POST['editar_usuario'])) {
     $objeto->editarUsuario();
+} elseif (isset($_POST['eliminar_usuario'])) {
+    $objeto->eliminarUsuario();
 } elseif (isset($_POST['registrar'])) { // Verificamos si viene del formulario de registro
     $objeto->registrarUsuario();
 } else {

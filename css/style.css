@@ -1,0 +1,37 @@
+
+li{
+   color: palevioletred;
+   display: inline;
+   font-size: 30px;
+   padding-inline: 10px;
+}
+ul{
+    position: absolute;
+    top: 20px;
+    left: 68%;
+}
+.centrado{
+    width: 80%;
+    height: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.Contacto{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height:500px;
+}
+.formulario{
+    font-family:yuji 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 15px;
+}
+
+.buttonv{
+    background-color: aqua;
+     width:80px; 
+     font-size: medium;
+     padding:2%;
+}

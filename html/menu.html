@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+      .dropdown-item:hover{
+        background-color: orange;
+      }
+      .btn-carrito-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgb(206, 183, 156);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .btn-carrito-flotante:hover {
+            background-color: goldenrod;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #e7d7d5;">
+  <!-- Botón flotante del carrito -->
+  <button class="btn-carrito-flotante" data-bs-toggle="modal" data-bs-target="#modalCarrito" title="Ver Carrito de Compras">
+    🛒
+  </button>
+  <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: #d1b4c5">
+    <div class="container-fluid">
+      <img src="../img/logo.png" style="width: 150px;" class="rounded" alt=""> <a class="navbar-brand text-dark" href="ejercicio1.html"><h2>Bella vita</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html">Inicio</a>
+          </li> 
+          
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+           
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="contacto.html">Contacto</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="reseva.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="Domicilio.php">Domicilio</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2>Selecciona una sección</h2>
+    <div class="btn-group">
+        <button type="button" class="btn tbn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: black; background-color: #d1b4c5;">
+            Ir a Sección
+        </button> 
+        <ul class="dropdown-menu"  style="border-color: black;">
+            <li><a class="dropdown-item" href="#seccion1">Entradas</a></li>
+            <li><a class="dropdown-item" href="#seccion2">Platos Fuertes</a></li>
+            <li><a class="dropdown-item" href="#seccion3">Postres</a></li>
+            <li><a class="dropdown-item" href="#seccion4">Cócteles</a></li>
+            <li><a class="dropdown-item" href="#seccion5">Vinos Tintos</a></li>
+            <li><a class="dropdown-item" href="#seccion6">Vinos Blancos</a></li>
+        </ul>
+    </div>
+  </div>
+
+    <h1 class="d-flex justify-content-center my-5" id="seccion1">Entradas</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/entrada1.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Ensalada de Langosta</h5>
+        <p class="card-text" style="font-size: 1.2rem; text-align: justify;">Ensalada elegante con trozos de langosta, aguacate, tomates cherry, y aderezada con una vinagreta de limón y hierbas frescas.</p>
+        <p style="font-size: 1.3rem; text-align: center;"><strong>$15.000</strong></p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/entrada2.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Sushi de Salmón y Aguacate</h5>
+        <p class="card-text">Rolls de sushi frescos con salmón y aguacate de wasabi de japon, jengibre y una salsa de soja de alta calidad.</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/entrada3.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Bruschetta de Tomate y Albahaca</h5>
+        <p class="card-text">Pan tostado con tomate fresco picado Un clásico italiano, pero ideal como entrada ligera y fresca.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/entrada4.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Carpaccio de Res</h5>
+        <p class="card-text">Finas láminas de res cruda acompañadas de queso parmesano rallado, rúcula, aceite de oliva y vinagre balsámico.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/entrada5.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Carpaccio de Berenjena</h5>
+        <p class="card-text">Finas láminas de berenjena marinadas con aceite de trufa, sal y pimienta, cubiertas con lascas de parmesano y un toque de albahaca fresca. Un plato ligero y sabroso.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="d-flex justify-content-center my-5 " id="seccion2">Platos Fuertes</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/rissotto.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Risotto de Setas y Trufa</h5>
+        <p class="card-text">Un risotto cremoso con setas silvestres y un toque de aceite de trufa, acompañado de una pequeña ensalada de hojas verdes y parmesano rallado.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/coqau.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Coq au Vin</h5>
+        <p class="card-text">Pollo cocido lentamente en vino tinto con cebollas, zanahorias y champiñones, servido con puré de papas o papas al vapor.</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/cordero.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Cordero a la Parrilla</h5>
+        <p class="card-text">Chuletas de cordero a la parrilla, servidas con una fresca salsa de yogurt y menta, acompañadas de cous cous y verduras asadas.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/pasta.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Pasta Fina con Langosta</h5>
+        <p class="card-text">Una pasta fresca, como tagliatelle o ravioli, servida con una salsa cremosa de azafrán y trozos de langosta, acompañada de un toque de ralladura de limón y hierbas frescas.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/bacalao.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Bacalao confitado</h5>
+        <p class="card-text">El bacalao confitado tiene una textura suave y jugosa. Se sirve con una crema de guisantes frescos y una espuma ligera de azafrán que le da un toque aromático y elegante. Este plato es ideal para un menú de mariscos gourmet.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/ravioli.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Ravioli de foie</h5>
+        <p class="card-text">Un plato italiano sofisticado, donde los raviolis están rellenos de foie gras, acompañados por una crema suave de trufa, ideal para una experiencia culinaria única.
+        </p>
+        <p>%20.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/lomovenado.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Lomos de venado</h5>
+        <p class="card-text">Un plato de venado bien cocinado con una salsa a base de frutos rojos que equilibre lo dulce y lo salado, acompañado de papas soufflé o un puré de apionabo.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/pato.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Pato confitado</h5>
+        <p class="card-text">El pato confitado tiene una textura deliciosa y suave, complementado por la dulzura del puré de manzana y la intensidad de la salsa de vino de oporto. Un plato que ofrece un equilibrio perfecto entre lo salado y lo dulce.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/vieras.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Vieiras a la plancha</h5>
+        <p class="card-text">Las vieiras, delicadamente a la plancha, se sirven con una crema ligera de limón y un toque de caviar, lo que hace de este plato una opción extremadamente refinada y exclusiva.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/ajillo.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Camarones al ajillo</h5>
+        <p class="card-text">Camarones salteados al ajillo, acompañados de una pasta ligera de espárragos, con un toque de aceite de trufa para darle un acabado sofisticado y aromático.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="d-flex justify-content-center my-5"  id="seccion3">Postres</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/lavanda.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Crème brûlée de lavanda</h5>
+        <p class="card-text">un toque único de lavanda y miel. El contraste entre la suavidad de la crema, la capa crujiente de azúcar caramelizado y las notas florales de la lavanda lo convierten en una experiencia exquisita.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/tiramisu.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Tiramisú clásicoTiramisú clásico</h5>
+        <p class="card-text">El tradicional tiramisú italiano con capas de bizcocho de savoiardi empapado en café, crema de mascarpone y cacao en polvo, pero con un toque sutil de licor de café para darle una profundidad extra de sabor..</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/macarons.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Macarons de frambuesa</h5>
+        <p class="card-text">Los macarons, pequeños y delicados, hechos con almendra y rellenos de una crema suave de mascarpone y frambuesas, son el epítome de la elegancia francesa en un postre.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/maracuya.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Cheesecake de maracuyá</h5>
+        <p class="card-text">Finas láminas de res cruda acompañadas de queso parmesano rallado, rúcula, aceite de oliva y vinagre balsámico.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/chocolate.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Fondant de Chocolate</h5>
+        <p class="card-text">Un pequeño pastel de chocolate caliente, cuyo interior es líquido y decadente. Se sirve típicamente con una bola de helado o una salsa de frambuesa.</p>
+        <p>$12.500</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="d-flex justify-content-center my-5" id="seccion4">Cócteles</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/martini.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Martini</h5>
+        <p class="card-text">(con ginebra o vodka, servido con aceituna o twist de limón)</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/negroni.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Negroni</h5>
+        <p class="card-text">(ginebra, vermut rojo y Campari)</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/manhatan.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Manhattan</h5>
+        <p class="card-text">(whisky, vermut dulce y angostura)</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/french75.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">French 75</h5>
+        <p class="card-text"> (ginebra, champán, azúcar y jugo de limón)</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/margarita.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Margarita</h5>
+        <p class="card-text">(tequila, licor de naranja, jugo de lima y sal)
+        </p>
+        <p>%20.000</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="d-flex justify-content-center my-5"  id="seccion5">Vinos Tintos</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/carbenet.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Cabernet Sauvignon</h5>
+        <p class="card-text">De cuerpo completo y sabores intensos de frutas oscuras (cassis, mora), con notas de roble y taninos firmes. Ideal para acompañar carnes rojas o platos con salsa rica.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/pinot.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Pinot Noir</h5>
+        <p class="card-text">Vino de cuerpo más ligero a medio, con aromas florales y sabores de frutas rojas (cereza, fresa). Perfecto para acompañar platos más delicados como pato, salmón o queso Brie.</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/zinfandel.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Zinfandel</h5>
+        <p class="card-text">Vino robusto y afrutado, con notas de mora, ciruela y especias. Es perfecto con carnes a la parrilla, platos picantes o pizzas con ingredientes fuertes.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/merlot.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Merlot</h5>
+        <p class="card-text"> (ginebra, champán, azúcar y jugo de limón)</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/malbec.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Malbec</h5>
+        <p class="card-text">Tinto suave, con sabores de frutas rojas como cereza y ciruela, con una textura sedosa. Ideal para acompañar carnes blancas como pollo o cerdo, así como pastas y quesos suaves.
+        </p>
+        <p>%20.000</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="d-flex justify-content-center my-5" id="seccion6">Vinos Blancos</h1>
+
+  <div class="d-flex justify-content-center flex-wrap gap-5">
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/carbenet.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Chardonnay</h5>
+        <p class="card-text">Un vino blanco con cuerpo, que puede tener sabores de manzana, limón, vainilla y roble. Dependiendo del estilo (más o menos barricado), puede acompañar desde mariscos y pescado hasta platos más complejos como pollo al horno o pasteles de pescado.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/grigio.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Pinot Grigio</h5>
+        <p class="card-text">Un vino ligero y fresco, con sabores de limón, manzana verde y flores. Perfecto para acompañar platos ligeros como ensaladas, mariscos, pastas con salsas ligeras y sushi.</p>
+        <p>%20.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/blanc.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Sauvignon Blanc</h5>
+        <p class="card-text">Vino más fresco, de cuerpo ligero a medio, con notas de hierbas frescas, limón y frutas tropicales. Es excelente con platos frescos como ensaladas, mariscos, pescados a la parrilla o quesos de cabra.</p>
+        <p>$14.000</p>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/riesling.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Riesling</h5>
+        <p class="card-text">Vino aromático, generalmente dulce o semi-seco, con sabores de frutas como durazno, manzana y miel. Ideal para platos picantes, como cocina asiática, o con postres de frutas.</p>
+        <p>$15.000</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 300px; background-color:#d1b4c5; border-radius: 15px; border: solid 1px black">
+      <img src="../img/chenin.jpg" class="card-img-top" alt="..." style="height: 300px; border-radius: 15px 15px 0px 0px;">
+      <div class="card-body ">
+        <h5 class="card-title">Chenin Blanc</h5>
+        <p class="card-text">De cuerpo ligero a medio, con sabores de manzana, miel y flores. Va muy bien con platos ligeros como ensaladas, pescado y mariscos, o platos con salsa de crema.
+        </p>
+        <p>%20.000</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- MODALES Y SCRIPT DE CARRITO (copiado desde Domicilio) -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-image: url(../img/logo.png);">
+          <img src="../img/logo.png" style="width: 150px; border-radius: 40px;" class="rounded" alt="">
+          <h5 class="modal-title">Carrito de Compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Selecciona tu método de pedido:</h6>
+          <div>
+            <input type="radio" name="metodoPedido" id="recoger" value="recoger" checked>
+            <label for="recoger">Recoger en tienda</label>
+          </div>
+          <div>
+            <input type="radio" name="metodoPedido" id="domicilio" value="domicilio">
+            <label for="domicilio">Entrega a domicilio</label>
+          </div>
+          <div id="mapaContainer" class="mt-3">
+            <h6>Ubicación de la tienda:</h6>
+            <iframe id="mapa" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div id="direccionContainer" class="mt-3" style="display: none;">
+            <label for="direccion">Dirección de Entrega:</label>
+            <input type="text" id="direccion" class="form-control" placeholder="Ingresa tu dirección">
+          </div>
+          <h6>Selecciona tu método de pago:</h6>
+          <div>
+            <input type="radio" name="metodoPago" id="efectivo" value="efectivo" checked>
+            <label for="efectivo">Efectivo</label>
+          </div>
+          <div>
+            <input type="radio" name="metodoPago" id="tarjeta" value="tarjeta">
+            <label for="tarjeta">Tarjeta de Crédito/Débito</label>
+          </div>
+          <div>
+            <input type="radio" name="metodoPago" id="pse" value="pse">
+            <label for="pse">PSE / Transferencia</label>
+          </div>
+          <ul id="listaCarrito" class="list-group"></ul>
+          <p class="mt-3">Total: <strong id="totalCarrito">$0.00</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger text-dark" id="vaciarCarrito" style="background-color: rgb(251, 125, 125);">Vaciar Carrito</button>
+          <button class="btn btn-success text-dark" style="background-color: rgb(120, 233, 120);" data-bs-toggle="modal" data-bs-target="#modalDomicilio" data-bs-dismiss="modal">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Modal para Domicilio -->
+    <div class="modal fade" id="modalDomicilio" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Información de Entrega</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form method="POST" action="../../controlador/domiciliocontrolador.php" id="formDomicilio">
+            <div class="mb-3">
+              <label for="direccion_entrega" class="form-label">Dirección de Entrega</label>
+              <input type="text" class="form-control" name="direccion" id="direccion_entrega" placeholder="Ingresa tu dirección completa" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono_entrega" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" name="telefono_entrega" id="telefono_entrega" placeholder="Tu número de teléfono" required>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion_pedido" class="form-label">Descripción del Pedido</label>
+              <textarea class="form-control" name="descripcion_pedido" id="descripcion_pedido" rows="3" placeholder="Describe los productos de tu pedido" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="valor_total" class="form-label">Valor Total</label>
+              <input type="number" class="form-control" name="valor_total" id="valor_total" step="0.01" placeholder="Valor total del pedido" required>
+            </div>
+            <button type="submit" name="crear_domicilio" class="btn btn-success w-100">Confirmar Pedido</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script>
+    // Agregar botones "Añadir al carrito" dinámicamente a cada tarjeta si no existen
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card .card-body').forEach(body => {
+        if (!body.querySelector('.agregar-carrito')) {
+          const titleElem = body.querySelector('.card-title');
+          const pElems = body.querySelectorAll('p');
+          const priceElem = pElems.length ? pElems[pElems.length - 1] : null;
+          let priceText = '0';
+          if (priceElem) {
+            priceText = priceElem.innerText.replace(/[^0-9.,]/g, '');
+            priceText = priceText.replace(/\./g, '').replace(/,/g, '.');
+          }
+
+          const btn = document.createElement('button');
+          btn.className = 'btn agregar-carrito mt-2';
+          btn.setAttribute('data-nombre', titleElem ? titleElem.innerText.trim() : 'Producto');
+          btn.setAttribute('data-precio', parseFloat(priceText) || 0);
+          btn.textContent = 'Añadir al carrito';
+          body.appendChild(btn);
+        }
+      });
+
+      // Inicializar funcionalidad del carrito
+      let carrito = [];
+      const listaCarrito = document.getElementById("listaCarrito");
+      const totalCarrito = document.getElementById("totalCarrito");
+      const contadorCarrito = document.getElementById("contadorCarrito");
+
+      function actualizarCarrito() {
+        if (!listaCarrito || !totalCarrito) return;
+        listaCarrito.innerHTML = "";
+        let total = 0;
+
+        carrito.forEach((producto, index) => {
+          total += producto.precio;
+          const item = document.createElement("li");
+          item.classList.add("list-group-item");
+          item.innerHTML = `${producto.nombre} - $${producto.precio.toFixed(2)}
+            <button class="btn btn-sm btn-danger text-dark float-end"  onclick="eliminarDelCarrito(${index})">X</button>`;
+          listaCarrito.appendChild(item);
+        });
+
+        totalCarrito.innerText = `$${total.toFixed(2)}`;
+        if (contadorCarrito) contadorCarrito.innerText = carrito.length;
+      }
+
+      window.eliminarDelCarrito = function(index) {
+        carrito.splice(index, 1);
+        actualizarCarrito();
+      }
+
+      document.getElementById("vaciarCarrito")?.addEventListener("click", () => {
+        carrito = [];
+        actualizarCarrito();
+      });
+
+      document.querySelectorAll('input[name="metodoPedido"]').forEach(radio => {
+        radio.addEventListener("change", () => {
+          const direccionContainer = document.getElementById("direccionContainer");
+          const mapaContainer = document.getElementById("mapaContainer");
+
+          if (document.getElementById("domicilio")?.checked) {
+            direccionContainer.style.display = "block"; 
+            mapaContainer.style.display = "none";
+          } else {
+            if (direccionContainer) direccionContainer.style.display = "none"; 
+            if (mapaContainer) mapaContainer.style.display = "block"; 
+          }
+        });
+      });
+
+      document.querySelectorAll(".agregar-carrito").forEach(boton => {
+        boton.addEventListener("click", () => {
+          const nombre = boton.getAttribute("data-nombre");
+          const precio = parseFloat(boton.getAttribute("data-precio")) || 0;
+
+          carrito.push({ nombre, precio });
+          actualizarCarrito();
+        });
+      });
+
+      document.getElementById("modalDomicilio")?.addEventListener("show.bs.modal", () => {
+        let descripcion = "";
+        carrito.forEach(producto => {
+          descripcion += "- " + producto.nombre + ": $" + producto.precio.toFixed(2) + "\n";
+        });
+        const totalCarritoText = (document.getElementById("totalCarrito")?.innerText || "").replace("$", "");
+        const descEl = document.getElementById("descripcion_pedido");
+        const valorEl = document.getElementById("valor_total");
+        if (descEl) descEl.value = descripcion;
+        if (valorEl) valorEl.value = totalCarritoText;
+      });
+    });
+    </script>
+
+    <footer class="bg-dark text-white py-5" style="margin-top: 100px;">
+    <div class="container">
+    <div class="row">
+    <!-- Columna 1 -->
+    <div class="col-md-4">
+    <h5>Enlaces</h5>
+    <ul class="list-unstyled">
+    <li><a href="#" class="text-white">Inicio</a></li>
+    <li><a href="#" class="text-white">Acerca de</a></li>
+    <li><a href="#" class="text-white">Servicios</a></li>
+    <li><a href="#" class="text-white">Contacto</a></li>
+    </ul>
+    </div>
+    <!-- Columna 2 -->
+    <div class="col-md-4">
+    <h5>Redes Sociales</h5>
+    <ul class="list-unstyled">
+    <li> <img src="../img/face.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Facebook</a></li>
+    <li><img src="../img/tito.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Tik tok</a></li>
+    <li> <img src="../img/insta.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Instagram</a></li>
+    <li> <img src="../img/what.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">whatssapp</a></li>
+    </ul>
+    </div>
+    <!-- Columna 3 -->
+    <div class="col-md-4">
+    <h5>Contacto</h5>
+    <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+    <p>Email: contacto@miweb.com</p>
+    </div>
+    </div>
+    </div>
+    <div class="text-center mt-4">
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+
+
+</body>
+</html>

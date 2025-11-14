@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* Imagen de fondo */
+        .background-image {
+            background-image: url('../img/fondo_reserva.jpg'); /* URL de tu imagen */
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .modal{
+          background-image: url(../img/logo.png);
+        }
+        /* Modal se posiciona encima de la imagen */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el modal */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+            border-radius: 8px;
+            width: 60%;
+            margin-top: 450px; /* Ajusta el tamaño del modal */
+        }
+        .modal-header{
+          background-color: goldenrod;
+        }
+        .modal-body{
+          background-color: bisque;
+        }
+        .modal-footer{
+          background-color: goldenrod;
+        }
+
+        /* Botón que abre el modal */
+        .btn-open-modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-open-modal:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm  navbar-dark"  style="background-color: rgb(84, 119, 116);">
+    <div class="container-fluid">
+      <img src="../img/logo.png" style="width: 150px;" class="rounded" alt=""> <a class="navbar-brand text-dark" href="ejercicio1.html"><h2>Bella vita</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html">Inicio</a>
+          </li> 
+          
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+           
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="contacto.html">Contacto</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="reseva.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="Domicilio.php">Domicilio</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <div class="background-image">
+        <!-- Botón que abre el modal -->
+        <button type="button" class="btn-open-modal" data-bs-toggle="modal" data-bs-target="#myModal">
+            RESERVA AHORA MISMO!!!!
+        </button>
+    </div>
+      
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Bella Vita</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <h2>Formulario de Reservas</h2>
+                    <form method="POST" action="../../controlador/reservacontrolador.php">
+                        <!-- Fecha y Hora de evento -->
+                        <div class="mb-3">
+                            <label for="fecha_evento" class="form-label">Fecha y Hora del Evento</label>
+                            <input type="datetime-local" class="form-control" name="fecha_evento" id="fecha_evento" required>
+                        </div>
+                
+                        <!-- Número de personas -->
+                        <div class="mb-3">
+                            <label for="numero_personas" class="form-label">Número de Personas</label>
+                            <input type="number" class="form-control" name="numero_personas" id="numero_personas" min="1" max="200" placeholder="Cantidad de personas" required>
+                        </div>
+                
+                        <!-- Descripción / Solicitudes especiales -->
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción / Solicitudes Especiales</label>
+                            <textarea class="form-control" name="descripcion" id="descripcion" rows="3" placeholder="Especifica alergias, preferencias de mesa, etc."></textarea>
+                        </div>
+                
+                        <!-- Botón de enviar -->
+                        <button type="submit" name="crear_reserva" class="btn btn-primary w-100">Reservar Ahora</button>
+                    </form>
+                </div>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+
+      
+    
+</body>
+</html>

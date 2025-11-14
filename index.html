@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../views/css/bootstrap.rtl.min.css">
+    <style>
+      .card-flip {
+          perspective: 1000px;
+      }
+
+      .card-inner {
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+      }
+
+      .card-flip:hover .card-inner {
+          transform: rotateY(180deg);
+      }
+
+      .card-front, .card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+      }
+
+      .card-back {
+          transform: rotateY(180deg);
+          background-color: bisque;
+          color: white;
+          padding: 20px;
+      }
+  </style>
+</head>
+</head>
+<body style="background-color: bisque;">
+  <nav class="navbar navbar-expand-sm  navbar-dark"  style="background-color: rgb(84, 119, 116);">
+    <div class="container-fluid">
+      <img src="./img/logo.png" style="width: 150px;" class="rounded" alt=""> <a class="navbar-brand text-dark" href="ejercicio1.html"><h2>Bella vita</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html">Inicio</a>
+          </li> 
+          
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="./html/menu.php">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="./html/nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+           
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="./html/contacto.html">Contacto</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="./html/reseva.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="./html/Domicilio.php">Domicilios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="html/perfil.php">Perfil</a>
+            </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="demo" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-ride="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-ride="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-ride="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-ride="#demo" data-bs-slide-to="3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active"  data-bs-interval="2000">
+            <img src="./img/fachada1.jpg" alt="imagen1"class="d-block w-100" style="width: 800px; height: 1000px">
+        </div>
+        <div class="carousel-item"  data-bs-interval="2000">
+            <img src="./img/fachada2.jpg" alt="imagen2" class="d-block w-100" style="width: 800px; height: 1000px">
+        </div>
+        <div class="carousel-item"  data-bs-interval="2000">
+            <img src="./img/fachada3.jpg" alt="imagen3" class="d-block w-100" style="width: 800px; height: 1000px">
+        </div>
+        <div class="carousel-item"  data-bs-interval="2000">
+            <img src="./img/fachada3.jpg" alt="imagen4" class="d-block w-100" style="width: 800px; height: 1000px">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+    <div class="container mt-5" style="height: 300px;"  >
+
+      <div class="row">
+          <div class="col-md-3 mb-4">
+              <div class="card card-flip">
+                  <div class="card-inner">
+                      <div class="card-front">
+                          <img src="./img/comida1.jpg" class="card-img-top" alt="Imagen 1" style="height: 200px;">
+                          <div class="card-body">
+                              <p class="card-text">Elegante</p>
+                          </div>
+                      </div>
+                      <div class="card-back" style="height: 200px;">
+                          <p class="card-text text-dark">Comida que conecta, ambiente que enamora. ¡Ven a saborear la magia de nuestros platos!</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-4">
+              <div class="card card-flip">
+                  <div class="card-inner">
+                      <div class="card-front">
+                          <img src="./img/comida2.jpg" class="card-img-top" alt="Imagen 2" style="height: 200px;">
+                          <div class="card-body">
+                              <p class="card-text">Cautivador</p>
+                          </div>
+                      </div>
+                      <div class="card-back" style="height: 200px;">
+                          <p class="card-text text-dark">Un viaje de sabores en cada plato. Vive una experiencia culinaria sin igual.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <div class="col-md-3 mb-4">
+              <div class="card card-flip">
+                  <div class="card-inner">
+                      <div class="card-front">
+                          <img src="./img/comida4.jpg" class="card-img-top" alt="Imagen 3" style="height: 200px;">
+                          <div class="card-body">
+                              <p class="card-text">Sofisticado</p>
+                          </div>
+                      </div>
+                      <div class="card-back" style="height: 200px;">
+                          <p class="card-text text-dark">"Deleita tu paladar con platos innovadores y frescos, preparados con pasión y amor por la comida</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+           <div class="col-md-3 mb-4">
+              <div class="card card-flip">
+                  <div class="card-inner">
+                      <div class="card-front">
+                          <img src="./img/comia5.jpg" class="card-img-top" alt="Imagen 4" style="height: 200px;">
+                          <div class="card-body">
+                              <p class="card-text">Glamoroso</p>
+                          </div>
+                      </div>
+                      <div class="card-back" style="height: 200px;">
+                          <p class="card-text text-dark">Sabores auténticos, ambiente único. Te invitamos a descubrir el verdadero placer de comer..</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <footer class="bg-dark text-white py-2">
+      <div class="container">
+      <div class="row">
+      <!-- Columna 1 -->
+      <div class="col-md-4">
+      <h5>Enlaces</h5>
+      <ul class="list-unstyled">
+      <li><a href="#" class="text-white">Inicio</a></li>
+      <li><a href="#" class="text-white">Acerca de</a></li>
+      <li><a href="#" class="text-white">Servicios</a></li>
+      <li><a href="#" class="text-white">Contacto</a></li>
+      </ul>
+      </div>
+      <!-- Columna 2 -->
+      <div class="col-md-4">
+      <h5>Redes Sociales</h5>
+      <ul class="list-unstyled">
+      <li> <img src="./img/face.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Facebook</a></li>
+      <li><img src="./img/tito.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Tik tok</a></li>
+      <li> <img src="./img/insta.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">Instagram</a></li>
+      <li> <img src="../img/what.jpg" alt="" style="width: 50px; height: 50px;"><a href="#" class="text-white">whatssapp</a></li>
+      </ul>
+      </div>
+      <!-- Columna 3 -->
+      <div class="col-md-4">
+      <h5>Contacto</h5>
+      <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+      <p>Email: contacto@miweb.com</p>
+      </div>
+      </div>
+      </div>
+      <div class="text-center mt-4">
+      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+      </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+   <!--  <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="card mx-4 my-5" style="width: 250px">
+        <img src="/img/fachada1.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Lucia Romero</h4>
+          <p class="card-text">NOMBRE: Lucia Romero</p>
+          <p class="card-text">DOCUMENTO: 108487577</p>
+          <p class="card-text">CORREO: JDSFBUERG@JJBSDJ</p>
+          <a href="#" class="btn btn-primary">ver perfil</a>
+        </div>
+      </div>
+
+      <div class="cd-flex flex-wrap justify-content-center gap-3">
+          <div class="card mx-4 my-5" style="width:250px">
+            <img src="/img/comida1.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">Liliana Paez</h4>
+              <p class="card-text">NOMBRE: experiencias unicas  </p>
+              <p class="card-text">CORREO: JDSFBUERG@JJBSDJ</p>
+              <a href="#" class="btn btn-primary">ver perfil</a>
+            </div>
+          </div>
+      </div>
+  </div>
+ -->
+ <!--  <div class="container">
+      <h1> Columnas </h1>
+      <div class="row">
+      <div class="col-md-2 bg-info">Columna 1</div> 
+      <div class="col-md-2 mark">Columna 2 </div> 
+  
+  <div class="row text-success">
+      <div class="col-md-2 text-warning"> <abbr title="COLM"> Columna 3 </abbr></div>
+      <div class="col-md-2">Columna 4 </div>
+  
+      <div class="col-md-2">Columna 5 </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-2">Columna 6</div>
+      <div class="col-md-2">Columna 7 </div>
+      <div class="col-md-2">Columna 8 </div>
+      <div class="col-md-2">Columna 9</div>
+  </div>
+  </div> -->
+  
+  <!-- <div class="container">
+      <h2> Manejo de Tablas </h2>
+      <table class="table table-striped table-sm">
+          <thead> 
+              <tr class="table-success"> 
+              <th> Número Documento </th>
+              <th> Nombre </th>
+              <th> Apellido </th>
+              <th> Correo </th>
+              <th> foto </th>
+              </tr>
+          </thead> 
+          <tbody>
+              <tr>
+                  <td> 1958327586</td>
+                  <td> Manuel </td>
+                  <td> Tellez </td>
+                  <td> manutellez10@gmail.com </td>
+                  <td> <img src="img/foto1.jpg" alt="Documento" width="50" class="rounded-circle"></td>
+              </tr>
+  
+              <tr class="table-primary">
+                  <td> 1345920195 </td>
+                  <td> Gabriela </td>
+                  <td> Beltrán </td>
+                  <td> gabribel90@gmail.com</td>
+                  <td> <img src="img/foto2.jpg" alt="Documento" width="50" class="img-thumbnail"></td>
+              </tr>
+          </tbody>
+      </table>
+  
+  </div> -->
+   
+    
+    
+    
+</body>
+</html>
